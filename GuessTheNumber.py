@@ -18,7 +18,6 @@ while True:
             number = int(inputimeout(prompt="Enter your guess: ", timeout=10)) 
         except TimeoutOccurred:
             print("You ran out of time! Exiting the game.")
-            time.sleep(2)
             break
     except ValueError:
         print("Please enter a valid number between 1 and 10.")
@@ -36,11 +35,12 @@ while True:
         print(f"Wrong! The number was {random_number}.")
 
     time.sleep(2)
-    play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+    play_again = input("Type yes if you want to play again. ").strip().lower()
     time.sleep(1)
     if play_again == "yes":
         continue
     else:
         print("Goodbye! Thanks for playing.")
         break
-exit
+time.sleep(3)
+exit(3)
